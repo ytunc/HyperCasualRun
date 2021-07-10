@@ -41,7 +41,6 @@ public class GameManager : MonoBehaviour
 
     public void BaseStart()
     {
-        soundManager = FindObjectOfType<SoundManager>();
         cameraController = FindObjectOfType<CameraController>();
         floorObjectPools = FindObjectOfType<FloorObjectPools>();
         prizeAmdPunishmentPool = FindObjectOfType<PrizeAmdPunishmentPool>();
@@ -50,7 +49,6 @@ public class GameManager : MonoBehaviour
         energyBar = FindObjectOfType<EnergyBar>();
         totalNumberObject = FindObjectOfType<TotalNumberObject>();
 
-        soundManager.PlayMusic();
         floorObjectPools.FirstIns(10);
         prizeAmdPunishmentPool.Start();
         prizeAmdPunishmentPool.StartCoroutine(nameof(prizeAmdPunishmentPool.Spawner));
@@ -58,5 +56,9 @@ public class GameManager : MonoBehaviour
         uiManager.StartGame();
         energyBar.SetEnergy(30);
         totalNumberObject.SetTotalNumberObject(0);
+
+
+        soundManager = FindObjectOfType<SoundManager>();
+        soundManager.PlayMusic();
     }
 }

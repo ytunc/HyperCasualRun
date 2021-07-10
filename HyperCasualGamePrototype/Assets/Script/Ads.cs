@@ -28,6 +28,7 @@ public class Ads : MonoBehaviour
 
     }
 
+
     private void RequestInterstitial()
     {
         interstitial_Ad = new InterstitialAd(interstitial_Ad_ID);

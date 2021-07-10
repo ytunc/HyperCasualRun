@@ -998,4 +998,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/mainScene.unity
   - Assets/Scenes/Scene.unity
-  playerPath: /Users/bytunc/Desktop/HyperCasualGamePrototype/Apk/apk.apk
+  playerPath: /Users/bytunc/Desktop/deneme.aab

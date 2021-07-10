@@ -1,4 +1,4 @@
-using System.Collections;
+  using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,6 +20,9 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float rotationPower;
     [SerializeField] private Vector3 rotationAngle;
+
+    [SerializeField] private Vector3 vector3Joystick;
+
     public void FixedUpdate()
     {
         transform.position += moveDirection * Time.deltaTime * speedPower;
@@ -36,6 +39,7 @@ public class Player : MonoBehaviour
             rigidbody.useGravity = true;
             animator.SetBool("IsRunning", true);
         }
+        /*
         if (leftMove)
         {
             this.gameObject.transform.eulerAngles = -rotationAngle;
@@ -51,7 +55,7 @@ public class Player : MonoBehaviour
         if (!leftMove && !rightMove)
         {
             this.gameObject.transform.eulerAngles = new Vector3(0,0,0);
-        }
+        }*/
     }
 
     private void OnTriggerEnter(Collider other)
