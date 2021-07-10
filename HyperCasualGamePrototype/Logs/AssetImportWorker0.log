@@ -81,3 +81,35 @@ Received Import Request.
 Start importing Assets/Script/Ads.cs using Guid(f07920bb10c964430900fe8f51c2c1b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80a72a639633dae1fa5e71d3e02d6487') in 1.739473 seconds 
   Import took 1.742665 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 157.777395 seconds.
+  path: Assets/Script/Player.cs
+  artifactKey: Guid(51b9c4d94fe2943f6b2861b3ab419f45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Player.cs using Guid(51b9c4d94fe2943f6b2861b3ab419f45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03c537bad4bdc94d75b6dd79f16f992f') in 0.008486 seconds 
+  Import took 0.018138 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001496 seconds.
+  path: Assets/Script/Player.cs
+  artifactKey: Guid(51b9c4d94fe2943f6b2861b3ab419f45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Player.cs using Guid(51b9c4d94fe2943f6b2861b3ab419f45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03c537bad4bdc94d75b6dd79f16f992f') in 0.000871 seconds 
+  Import took 0.004642 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.934878 seconds.
+  path: Assets/Script/CameraController.cs
+  artifactKey: Guid(1d75c509befd4437997e677e16573386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/CameraController.cs using Guid(1d75c509befd4437997e677e16573386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2e53d096cf24829e31b0c5ed2e89562') in 0.002241 seconds 
+  Import took 0.006904 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008855 seconds.
+  path: Assets/Script/CameraController.cs
+  artifactKey: Guid(1d75c509befd4437997e677e16573386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/CameraController.cs using Guid(1d75c509befd4437997e677e16573386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2e53d096cf24829e31b0c5ed2e89562') in 0.001789 seconds 
+  Import took 0.004994 seconds .
+
