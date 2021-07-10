@@ -56,18 +56,19 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Joystick Pack/Scripts/Editor/VariableJoystickEditor.cs" />
     <Compile Include="Assets/Joystick Pack/Scripts/Editor/FloatingJoystickEditor.cs" />
     <Compile Include="Assets/Joystick Pack/Scripts/Editor/JoystickEditor.cs" />
     <Compile Include="Assets/Joystick Pack/Scripts/Editor/DynamicJoystickEditor.cs" />
-    <Compile Include="Assets/Joystick Pack/Scripts/Editor/VariableJoystickEditor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets/ExternalDependencyManager/Editor/Google.VersionHandlerImpl_v1.2.165.dll" />
-    <None Include="Assets/ExternalDependencyManager/Editor/Google.PackageManagerResolver_v1.2.165.dll" />
-    <None Include="Assets/ExternalDependencyManager/Editor/external-dependency-manager_version-1.2.165_manifest.txt" />
-    <None Include="Assets/ExternalDependencyManager/Editor/Google.JarResolver_v1.2.165.dll" />
+    <None Include="Assets/ExternalDependencyManager/Editor/Google.IOSResolver_v1.2.161.dll" />
+    <None Include="Assets/ExternalDependencyManager/Editor/GoogleRegistries.xml" />
+    <None Include="Assets/ExternalDependencyManager/Editor/Google.PackageManagerResolver_v1.2.161.dll" />
+    <None Include="Assets/ExternalDependencyManager/Editor/Google.VersionHandlerImpl_v1.2.161.dll" />
     <None Include="Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll" />
-    <None Include="Assets/ExternalDependencyManager/Editor/Google.IOSResolver_v1.2.165.dll" />
+    <None Include="Assets/ExternalDependencyManager/Editor/Google.JarResolver_v1.2.161.dll" />
+    <None Include="Assets/ExternalDependencyManager/Editor/external-dependency-manager_version-1.2.161_manifest.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -307,44 +308,32 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="Google.PackageManagerResolver_v1.2.165">
-      <HintPath>Assets/ExternalDependencyManager/Editor/Google.PackageManagerResolver_v1.2.165.dll</HintPath>
-    </Reference>
     <Reference Include="Google.VersionHandler">
       <HintPath>Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll</HintPath>
     </Reference>
     <Reference Include="log4netPlastic">
       <HintPath>Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Plastic.Antlr3.Runtime">
-      <HintPath>Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.JarResolver_v1.2.165">
-      <HintPath>Assets/ExternalDependencyManager/Editor/Google.JarResolver_v1.2.165.dll</HintPath>
-    </Reference>
-    <Reference Include="GoogleMobileAds.Common">
-      <HintPath>Assets/GoogleMobileAds/GoogleMobileAds.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="unityplastic">
-      <HintPath>Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
-    </Reference>
-    <Reference Include="GoogleMobileAds">
-      <HintPath>Assets/GoogleMobileAds/GoogleMobileAds.dll</HintPath>
-    </Reference>
-    <Reference Include="GoogleMobileAds.Unity">
-      <HintPath>Assets/GoogleMobileAds/GoogleMobileAds.Unity.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="GoogleMobileAds.Core">
-      <HintPath>Assets/GoogleMobileAds/GoogleMobileAds.Core.dll</HintPath>
+    <Reference Include="Google.PackageManagerResolver_v1.2.161">
+      <HintPath>Assets/ExternalDependencyManager/Editor/Google.PackageManagerResolver_v1.2.161.dll</HintPath>
     </Reference>
-    <Reference Include="Google.IOSResolver_v1.2.165">
-      <HintPath>Assets/ExternalDependencyManager/Editor/Google.IOSResolver_v1.2.165.dll</HintPath>
+    <Reference Include="Google.IOSResolver_v1.2.161">
+      <HintPath>Assets/ExternalDependencyManager/Editor/Google.IOSResolver_v1.2.161.dll</HintPath>
     </Reference>
-    <Reference Include="Google.VersionHandlerImpl_v1.2.165">
-      <HintPath>Assets/ExternalDependencyManager/Editor/Google.VersionHandlerImpl_v1.2.165.dll</HintPath>
+    <Reference Include="Unity.Plastic.Antlr3.Runtime">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.JarResolver_v1.2.161">
+      <HintPath>Assets/ExternalDependencyManager/Editor/Google.JarResolver_v1.2.161.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.VersionHandlerImpl_v1.2.161">
+      <HintPath>Assets/ExternalDependencyManager/Editor/Google.VersionHandlerImpl_v1.2.161.dll</HintPath>
+    </Reference>
+    <Reference Include="unityplastic">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
@@ -729,9 +718,9 @@
       <Project>{BBD2298F-BF24-D2F4-682A-9CA751F192E6}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{BE883320-9AAB-BB37-9CFB-66038FCA1615}</Project>
-      <Name>Unity.Timeline.Editor</Name>
+    <ProjectReference Include="GoogleMobileAds.csproj">
+      <Project>{21076EE5-6BDF-7616-5752-E9D4EB602686}</Project>
+      <Name>GoogleMobileAds</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
       <Project>{B00D0902-E99B-56AD-5DAD-1D7E625CBC18}</Project>
@@ -741,13 +730,9 @@
       <Project>{ED17F9E3-0B6F-7496-9357-11A753F39872}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.Monetization.csproj">
-      <Project>{40DA29E5-41E1-25C2-1BEE-8F9F02AB45E8}</Project>
-      <Name>UnityEngine.Monetization</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.Advertisements.csproj">
-      <Project>{306FF3D6-B608-FC9E-F67F-AACAC4E96F90}</Project>
-      <Name>UnityEngine.Advertisements</Name>
+    <ProjectReference Include="Unity.Timeline.Editor.csproj">
+      <Project>{BE883320-9AAB-BB37-9CFB-66038FCA1615}</Project>
+      <Name>Unity.Timeline.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{6182D894-41BC-21B5-02E6-B96B7CC64EA1}</Project>
@@ -760,10 +745,6 @@
     <ProjectReference Include="Unity.Rider.Editor.csproj">
       <Project>{5302C7C5-12EE-85FB-9A7F-4BE30500200D}</Project>
       <Name>Unity.Rider.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.Advertisements.Editor.csproj">
-      <Project>{757C2B0E-6CC2-7CAF-70AD-616E0481C07F}</Project>
-      <Name>UnityEngine.Advertisements.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{CFD486E0-C657-7E9C-7176-602A6BAE43F2}</Project>

@@ -1,4 +1,5 @@
-  using System.Collections;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,41 +22,36 @@ public class Player : MonoBehaviour
     [SerializeField] private float rotationPower;
     [SerializeField] private Vector3 rotationAngle;
 
+    [SerializeField] private VariableJoystick variableJoystick;
     [SerializeField] private Vector3 vector3Joystick;
+    [SerializeField] private float joystickSensitivity;
+
+    [SerializeField] private Material defaultRendererMat;
+    [SerializeField] private Material punishmentRendererMat;
+
+    [SerializeField] private bool tackle;
 
     public void FixedUpdate()
     {
         transform.position += moveDirection * Time.deltaTime * speedPower;
+        transform.position =new Vector3(transform.position.x +
+            (variableJoystick.Horizontal / 3),transform.position.y, this.transform.position.z);
 
+        this.gameObject.transform.eulerAngles = new Vector3(0,variableJoystick.Horizontal * joystickSensitivity, 0);
+
+        
         if (!_jumping)
         {
             rigidbody.useGravity = false;
             _jumpPower = _jumpPower + Time.deltaTime;
-            this.gameObject.transform.position = new Vector3(transform.position.x,
+            transform.position = new Vector3(transform.position.x,
                  _jumpPower, transform.position.z);
         }
-        else
+        else if (tackle == false)
         {
             rigidbody.useGravity = true;
             animator.SetBool("IsRunning", true);
         }
-        /*
-        if (leftMove)
-        {
-            this.gameObject.transform.eulerAngles = -rotationAngle;
-            this.gameObject.transform.position = new Vector3(transform.position.x - rotationPower,
-                 _jumpPower, transform.position.z);
-        }
-        if (rightMove)
-        {
-            this.gameObject.transform.eulerAngles = rotationAngle;
-            this.gameObject.transform.position = new Vector3(transform.position.x + rotationPower,
-                 _jumpPower, transform.position.z);
-        }
-        if (!leftMove && !rightMove)
-        {
-            this.gameObject.transform.eulerAngles = new Vector3(0,0,0);
-        }*/
     }
 
     private void OnTriggerEnter(Collider other)
@@ -70,14 +66,18 @@ public class Player : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("prize"))
         {
+            other.gameObject.GetComponent<PrizeAndPunishmentController>().StartParticle();
             totalNumberObject.SetTotalNumberObject(1);
             energyBar.SetEnergy(5);
         }
         else if (other.gameObject.CompareTag("punishment"))
         {
+            StartCoroutine(nameof(ChangeRendererMaterial));
             energyBar.SetEnergy(-5);
+            other.gameObject.SetActive(false);
         }
     }
+
 
     public void Dead()
     {
@@ -93,13 +93,31 @@ public class Player : MonoBehaviour
     private IEnumerator JumpMechanic()
     {
         animator.SetBool("IsRunning", false);
+        animator.SetBool("IsJumping", true);
         yield return new WaitForSeconds(1);
         _jumping = true;
         _jumpPower = 0;
     }
 
-    public void StartGame()
+    public void Tackle()
     {
+        StartCoroutine(nameof(TackleMechanic));
+    }
+
+    private IEnumerator TackleMechanic()
+    {
+        tackle = true;
+        animator.SetBool("IsTackle", true);
+        animator.SetBool("IsRunning", false);
+        animator.SetBool("IsJumping", false);
+        yield return new WaitForSeconds(1);
+        tackle = false;
+        animator.SetBool("IsTackle", false);
+        animator.SetBool("IsRunning", true);
+    }
+
+    public void StartGame()
+    { 
         this.gameObject.transform.position = Vector3.zero;
         animator.SetBool("IsRunning" , true);
         speedPower = 5;
@@ -121,5 +139,12 @@ public class Player : MonoBehaviour
     public void RightMoveEnd()
     {
         rightMove = false;
+    }
+
+    private IEnumerator ChangeRendererMaterial()
+    {
+        RenderSettings.skybox = punishmentRendererMat;
+        yield return new WaitForSeconds(1);
+        RenderSettings.skybox = defaultRendererMat;
     }
 }
